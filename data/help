@@ -1,0 +1,5 @@
+> /face - render emoji faces
+
+
+`/face [eye] [nose] [mouth]`	render face
+`/face --help -h`	show help

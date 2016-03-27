@@ -1,0 +1,40 @@
+{
+  "name": "slack-face",
+  "version": "0.0.1",
+  "description": "/face - custom slack slash command for rendering emoji faces",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha dist/test",
+    "postinstall": "gulp js"
+  },
+  "keywords": [
+    "slack",
+    "extension",
+    "emoji",
+    "face"
+  ],
+  "author": "Zach Hodge",
+  "license": "MIT",
+  "engines": {
+    "node": "4.4.1",
+    "npm": "2.14.20"
+  },
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "minimist": "^1.2.0",
+    "redis": "^2.6.0-0",
+    "slack": "^6.1.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
