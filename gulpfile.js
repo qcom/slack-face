@@ -3,6 +3,7 @@ var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
+var eslint = require('gulp-eslint');
 
 var paths = {
 	js: ['./src/**/*.js']
@@ -16,6 +17,13 @@ function reportError(err) {
 	console.error(err.toString());
 	this.emit('end');
 }
+
+// lint src/
+gulp.task('lint', function() {
+	return gulp.src(paths.js)
+		.pipe(eslint())
+		.pipe(eslint.format());
+});
 
 // transpile es2015 -> es5
 gulp.task('js', function() {
@@ -31,6 +39,10 @@ gulp.task('js', function() {
 	.pipe(gulp.dest('dist'));
 });
 
-gulp.task('watch', ['js'], function() {
-	gulp.watch(paths.js, ['js']);
+const defaultTasks = ['lint', 'js'];
+
+gulp.task('default', defaultTasks);
+
+gulp.task('watch', defaultTasks, function() {
+	gulp.watch(paths.js, defaultTasks);
 });
