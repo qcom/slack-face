@@ -48,6 +48,16 @@ function filterFalsy(obj) {
 	}, {});
 }
 
+function onlyEmojis(obj) {
+	return Object.keys(obj)
+	.reduce(function(prev, curr) {
+		const string = obj[curr];
+		if (string[0] === ':' && string[string.length - 1] === ':')
+			prev[curr] = string;
+		return prev;
+	}, {});
+}
+
 function renderFace(options) {
 	const defaults = {
 		eye:	':eye:',
@@ -55,7 +65,9 @@ function renderFace(options) {
 		mouth:	':lips:'
 	};
 
-	const { eye, nose, mouth } = Object.assign(defaults, filterFalsy(options));
+	const filteredOptions = onlyEmojis(filterFalsy(options));
+
+	const { eye, nose, mouth } = Object.assign(defaults, filteredOptions);
 
 	const padding = '       ';
 
