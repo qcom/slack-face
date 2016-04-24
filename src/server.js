@@ -14,7 +14,7 @@ app.route('/face')
 	.post(middleware.parseRequest)
 	.post(middleware.handleHelp)
 	.post(middleware.buildFace)
-	.post(middleware.postMessage);
+	.post(middleware.postFace);
 
 app.use(middleware.handleError);
 
