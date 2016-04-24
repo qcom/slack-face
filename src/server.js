@@ -11,7 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.route('/face')
 	.post(middleware.authenticateRequest)
-	.post(middleware.setMessage)
+	.post(middleware.parseRequest)
+	.post(middleware.handleHelp)
+	.post(middleware.buildFace)
 	.post(middleware.postMessage);
 
 app.use(middleware.handleError);

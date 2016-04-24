@@ -1,11 +1,15 @@
 import authenticateRequest from './authenticateRequest';
+import buildFace from './buildFace';
 import handleError from './handleError';
+import handleHelp from './handleHelp';
+import parseRequest from './parseRequest';
 import postMessage from './postMessage';
-import setMessage from  './setMessage';
 
 export default {
 	authenticateRequest,
+	buildFace,
 	handleError,
-	postMessage,
-	setMessage
+	handleHelp,
+	parseRequest,
+	postMessage
 };
