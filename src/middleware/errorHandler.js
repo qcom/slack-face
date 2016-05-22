@@ -1,12 +1,10 @@
-export default function handleError(err, req, res, next) {
+export default function errorHandler(err, req, res, next) {
 	console.error(err);
 
 	// delegate to default express error handler if headers have already been sent
 	if (res.headersSent) return next(err);
 
-	const errorMessage = getErrorMessage();
-
-	res.end(errorMessage);
+	res.end(getErrorMessage());
 }
 
 function getErrorMessage() {

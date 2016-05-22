@@ -1,6 +1,6 @@
 import authenticateRequest from './authenticateRequest';
 import buildFace from './buildFace';
-import handleError from './handleError';
+import errorHandler from './errorHandler';
 import handleHelp from './handleHelp';
 import parseRequest from './parseRequest';
 import postFace from './postFace';
@@ -8,7 +8,7 @@ import postFace from './postFace';
 export default {
 	authenticateRequest,
 	buildFace,
-	handleError,
+	errorHandler,
 	handleHelp,
 	parseRequest,
 	postFace

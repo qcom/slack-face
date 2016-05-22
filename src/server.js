@@ -16,6 +16,7 @@ app.route('/face')
 	.post(middleware.buildFace)
 	.post(middleware.postFace);
 
-app.use(middleware.handleError);
+/* errors */
+app.use(middleware.errorHandler);
 
 app.listen(9001);
