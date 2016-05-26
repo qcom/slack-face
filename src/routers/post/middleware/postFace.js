@@ -1,4 +1,4 @@
-import slack from '../lib/slack';
+import slack from '../../../lib/slack';
 
 export default function postMessage(req, res, next) {
 	const { channel_id } = req.body;
