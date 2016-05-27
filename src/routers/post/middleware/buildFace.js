@@ -13,13 +13,13 @@ export default function buildFace(req, res, next) {
 			break;
 		}
 		case 2: {
-			const [ eyes, nose ] = options;
-			face = renderFace({ eyes, nose });
+			const [ leftEye, rightEye ] = options;
+			face = renderFace({ leftEye, rightEye });
 			break;
 		}
 		case 3: {
-			const [ eyes, nose, mouth ] = options;
-			face = renderFace({ eyes, nose, mouth });
+			const [ leftEye, rightEye, nose ] = options;
+			face = renderFace({ leftEye, rightEye, nose });
 			break;
 		}
 		case 4: {
