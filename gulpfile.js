@@ -33,7 +33,7 @@ gulp.task('js', function() {
 	}))
 	.pipe(sourcemaps.init())
 		.pipe(babel({
-			presets: ['es2015']
+			presets: ['es2015-node6']
 		}))
 	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest('dist'));
