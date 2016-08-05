@@ -17,8 +17,8 @@
   "author": "Zach Hodge",
   "license": "MIT",
   "engines": {
-    "node": "4.4.1",
-    "npm": "2.14.20"
+    "node": "6.2.2",
+    "npm": "3.9.5"
   },
   "dependencies": {
     "bluebird": "^3.3.4",
